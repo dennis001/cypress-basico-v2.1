@@ -27,8 +27,11 @@ describe('Central de Atendimento ao cliente 2.0', function(){
         cy.get('#lastName').type('Sousa')
         cy.get('#email').type('dennis@gmail.com')
         cy.get('#phone').type('15987654321')
-        cy.get('#product').select('cursos').click
-        cy.get('#support-type').select('3')
-        cy.get('#email-checkbox').click
+        cy.get('#product').select('Blog').click
+        cy.get('input[value="elogio"]').check()
+        cy.get('#email-checkbox').check()
+        cy.get('#open-text-area')
+            .type('Olá, estou feliz com o meu atendimento no seu produto.  Obrigado pela atenção.')
+        cy.get('.button').click
     })
 })
