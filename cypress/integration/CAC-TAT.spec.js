@@ -55,4 +55,8 @@ describe('Central de Atendimento ao cliente 2.0', function(){
         cy.get('.button').click()
         cy.get('.error').should('be.visible')
     })
+
+    it('encontre o gato', function(){
+        cy.get('#cat').should('be.visible');
+    })
 })
